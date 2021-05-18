@@ -1,5 +1,5 @@
-#include "Card.h"
-#include "TextCard.h"
+#include <C:/Programming/Github Projects/BlackjackGame/Include/Card.h>
+#include <C:/Programming/Github Projects/BlackjackGame/Include/TextCard.h>
 #include <iostream>
 
 //empty constructor

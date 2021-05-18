@@ -1,4 +1,4 @@
-#include "Card.h"
+#include <C:/Programming/Github Projects/BlackjackGame/Include/Card.h>
 
 class Deck : public Card {
     /*
