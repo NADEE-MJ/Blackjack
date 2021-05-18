@@ -1,6 +1,6 @@
 #include <string>
 
-std::string cards[52][13] = {
+std::string cardDisplay[52][13] = {
 { " ------------- \n",
 "|AD           |\n",
 "|   -------   |\n",
