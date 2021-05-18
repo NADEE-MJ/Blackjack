@@ -1,5 +1,4 @@
 #include "Card.h"
-#include "TextCard.h"
 
 class Hand : public Card {
     private:
