@@ -1,7 +1,4 @@
 #include <string>
-#include <iostream>
-
-using namespace std;
 
 class Card {
     /*
@@ -10,18 +7,17 @@ class Card {
     display a text based version of the card, and return the cards value.
     */
 
-    protected:
+    public:
         //class variables
         int value;
         char suit;
 
-    public:
         //constrctors
         Card();
         Card(int v, char s);
 
         //methods
-        string displayCardName();
+        std::string displayCardName();
         void displayCard();
         int cardValue();
 };

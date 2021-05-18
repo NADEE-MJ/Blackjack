@@ -1,4 +1,10 @@
-#include <Deck.h>
+#include "Deck.h"
+#include <iostream>
+
+Deck::Deck() {
+    createDeck();
+    shuffle();
+}
 
 void Deck::createDeck() {
     for (int i = 0; i < 13; i++) {
@@ -23,5 +29,15 @@ void Deck::createDeck() {
 }
 
 void Deck::shuffle() {
-    
+    for (int i = 0; i < 7; i++) {
+		srand(time(NULL));
+
+	    for (int i = 0; i < 52; i++) {
+		    int r = rand() % (52 - i) + i;
+
+		    Card temp = deck[i];
+		    deck[i] = deck[r];
+		    deck[r] = temp;
+	    }
+	}
 }

@@ -1,7 +1,7 @@
-#include <Deck.h>
-#include <TextCard.h>
+#include "Card.h"
+#include "TextCard.h"
 
-class Hand : public Deck {
+class Hand : public Card {
     private:
         Card hand[11];
         int sizeHand;
@@ -13,4 +13,6 @@ class Hand : public Deck {
         void hit();
         void handValue();
         void displayHand();
+
+        friend class Deck;
 };
