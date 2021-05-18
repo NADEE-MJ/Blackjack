@@ -1,7 +1,6 @@
 #include <Card.h>
 #include <TextCard.h>
 
-
 //empty constructor
 Card::Card() {
     value = 0;

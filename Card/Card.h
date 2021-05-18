@@ -10,7 +10,7 @@ class Card {
     display a text based version of the card, and return the cards value.
     */
 
-    private:
+    protected:
         //class variables
         int value;
         char suit;
