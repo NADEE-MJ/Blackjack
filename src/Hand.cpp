@@ -3,14 +3,17 @@
 #include <iostream>
 
 void Hand::createHand() {
-    for (int i = 0; i < 11; i++) {
+    const int largestHand = 11;
+
+    for (int i = 0; i < largestHand; i++) {
         hand[i].value = 0;
         hand[i].suit = ' ';
     }   
 }
 
 void Hand::dealHand(Card deck[52], int topCard) {
-    for (int i = 0; i < 2; i++) {
+    const int standardHand = 2;
+    for (int i = 0; i < standardHand; i++) {
         hand[i] = deck[topCard];
         topCard++;
         sizeHand++;
