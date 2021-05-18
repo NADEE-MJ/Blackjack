@@ -8,10 +8,9 @@ class Hand : public Card {
 
     public:
         void createHand();
-        void dealHand();
-        void shuffle();
-        void hit();
-        void handValue();
+        void dealHand(Card Deck[52], int topCard);
+        void hit(Card Deck[52], int topCard);
+        int handValue();
         void displayHand();
 
         friend class Deck;
