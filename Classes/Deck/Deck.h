@@ -8,8 +8,8 @@ class Deck : public Card {
     */
     private:
         //class variables
-        Card deck[52];
-        int topCard = 0;
+        Card deck[];
+        int topCard;
 
     public:
         //blank constructor

@@ -16,7 +16,7 @@ Card::Card(int v, char s) {
 
 std::string Card::displayCardName() {
     /*
-    Public method for card class that displays the name of the card using the number value of the card,
+    Displays the name of the card using the number value of the card,
     number cards are 2 to 10, ace is 1, jack is 11, queen is 12, and king is value 13.
     Distinction is made to clearly label the cards given out.
     */

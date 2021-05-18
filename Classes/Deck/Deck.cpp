@@ -2,6 +2,8 @@
 #include <iostream>
 
 Deck::Deck() {
+    Card deck[52];
+    int topCard = 0;
     createDeck();
     shuffle();
 }
