@@ -12,7 +12,6 @@ class Card {
         //class variables
         int value;
         char suit;
-        std::string textCard;
 
         //constrctors
         Card();

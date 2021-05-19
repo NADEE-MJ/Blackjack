@@ -1,7 +1,7 @@
 #include <string>
 #pragma once
 
-std::string textCard[52][13] = {
+const std::string textCard[52][13] = {
 { " ------------- \n",
 "|AD           |\n",
 "|   -------   |\n",
