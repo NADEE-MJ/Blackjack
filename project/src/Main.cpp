@@ -1,7 +1,6 @@
 #include <Deck.h>
 #include <Hand.h>
 #include <iostream>
-#include <Windows.h>
 
 Deck d;
 
@@ -16,19 +15,18 @@ int main() {
 
 
     //while (running) {
-    system("cls");
-
+    
+    std::cout << std::flush;
 
     d.shuffle();
     std::cout << "Game: Blackjack" << std::endl << std::endl;
     std::cout << "Here are your cards:" << std::endl;
     player.hand[0].value = 9;
-    player.hand[0].suit = 'D';
+    player.hand[0].suit = 'S';
 
     player.hand[1].value = 10;
-    player.hand[1].suit = 'D';
+    player.hand[1].suit = 'S';
 
-    player.handValue();
     player.displayHand();
     player.dealHand(d.deck, d.topCard);
     player.handValue();

@@ -1,5 +1,4 @@
 #include <Card.h>
-#pragma once   
 
 class Hand : public Card {
     public:

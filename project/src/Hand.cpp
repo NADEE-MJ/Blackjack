@@ -3,7 +3,7 @@
 #include <iostream>
 
 Hand::Hand() {
-    sizeHand = 0;
+    sizeHand = 2;
     valueHand = 0;
 }
 
@@ -56,9 +56,10 @@ void Hand::displayHand() {
     
     std::cout << "Hand value is " << valueHand << std::endl;
 
+    int cardSize = 13;
     std::string temp;
-    for (int i = 0; i < 13; i++) {
-        temp = "";    
+    for (int i = 0; i < cardSize; i++) {
+        temp = "   ";    
         for (int j = 0; j < sizeHand; j++) {
             if (hand[j].suit == 'D') {
                 temp += textCard[hand[j].value - 1][i];

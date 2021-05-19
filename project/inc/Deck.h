@@ -1,5 +1,4 @@
 #include <Card.h>
-#pragma once
 
 class Deck : public Card {
     /*

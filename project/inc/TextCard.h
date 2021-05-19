@@ -1,5 +1,4 @@
 #include <string>
-#pragma once
 
 const std::string textCard[52][13] = {
 { " ------------- ",
