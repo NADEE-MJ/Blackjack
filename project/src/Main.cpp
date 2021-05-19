@@ -1,6 +1,7 @@
 #include <Deck.h>
 #include <Hand.h>
 #include <iostream>
+#include <windows.h>
 
 Deck d;
 
@@ -9,8 +10,8 @@ Hand dealer;
 
 int main() {
     bool playing;
-    bool playerWin;
-    bool dealerWin;
+    bool playerEndGame;
+    bool dealerEndGame;
     bool dealerHit;
     char playAgain;
 
@@ -23,8 +24,8 @@ int main() {
     //std::cout << std::flush;
 
     do {
-        playerWin = false;
-        dealerWin = false;
+        playerEndGame = false;
+        dealerEndGame = false;
 
         d.shuffle();
         std::cout << "Game: Blackjack" << std::endl << std::endl;
@@ -35,32 +36,41 @@ int main() {
         dealer.dealHand(d.deck, &d.topCard);
         
         
-        do {
-            std::cout << "Enter h to hit or anything else to stay: ";
-            std::cin >> hitOrStay;
-            if (hitOrStay == 'h' || hitOrStay == 'H') {
-                player.hit(d.deck, &d.topCard);
-                player.displayHand();
-            }
-            if (player.valueHand > 21) {
-                std::cout << "You Busted";
-                hitOrStay = 'n';
-            }
-            else if (player.valueHand == 21) {
-                std::cout << "You Win!";
-                hitOrStay = 'n';
-                playerWin = true;
-            }
-        } while (hitOrStay == 'h' || hitOrStay == 'H');
-
-        
-        if (!playerWin) {
+        if (!(player.valueHand == 21)) {
             do {
+                std::cout << "Enter h to hit or anything else to stay: ";
+                std::cin >> hitOrStay;
+                if (hitOrStay == 'h' || hitOrStay == 'H') {
+                    player.hit(d.deck, &d.topCard);
+                    player.displayHand();
+                }
+                if (player.valueHand > 21) {
+                    std::cout << "You Busted" << std::endl;
+                    hitOrStay = 'n';
+                    playerEndGame = true;
+                }
+                else if (player.valueHand == 21) {
+                    std::cout << "You Win!" << std::endl;
+                    hitOrStay = 'n';
+                    playerEndGame = true;
+                }
+            } while (hitOrStay == 'h' || hitOrStay == 'H');
+        }
+        
+        Sleep(2000);
+        if (!playerEndGame) {
+            do {
+                std::cout << "Here are the dealer's cards: " << std::endl;
                 dealer.displayHand();
                 if (dealer.valueHand == 21) {
-                    std::cout << "The dealer wins!";
+                    std::cout << "The dealer wins!" << std::endl;
                     dealerHit = false;
-                    dealerWin = true;
+                    dealerEndGame = true;
+                }
+                else if (dealer.valueHand > 21) {
+                    std::cout << "You Win!" << std::endl;
+                    dealerHit = false;
+                    dealerEndGame = true;
                 }
                 else if (dealer.valueHand >= 17) {
                     dealerHit = false;
@@ -69,8 +79,9 @@ int main() {
                     dealer.hit(d.deck, &d.topCard);
                     dealerHit = true;
                 }
+                Sleep(2000);
             } while (dealerHit);
-            if (!dealerWin) {
+            if (!dealerEndGame) {
                 if (player.valueHand > dealer.valueHand) {
                     std::cout << "You Win!" << std::endl;
                 }
