@@ -54,6 +54,8 @@ void Hand::displayHand() {
     int textCardSize = 13;
     std::string temp;
 
+    std::cout << std::endl;
+
     for (int i= 0; i < sizeHand; i++) {
         temp = "";
         temp = hand[i].displayCardName();
