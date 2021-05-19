@@ -26,15 +26,16 @@ std::string Card::displayCardName() {
         switch(value) {
             case 1:
                 cardName += "Ace";
-
+                break;
             case 11:
                 cardName += "Jack";
-
+                break;
             case 12:
                 cardName += "Queen";
-
+                break;
             case 13:
                 cardName += "King";
+                break;
         }
     }
     
@@ -44,15 +45,16 @@ std::string Card::displayCardName() {
     switch(suit) {
         case 'D':
             cardName += "Diamonds";
-
+            break;
         case 'H':
             cardName += "Hearts";
-
+            break;
         case 'S':
             cardName += "Spades";
-
+            break;
         case 'C':
             cardName += "Clubs";
+            break;
     }
 
     cardName += "]";

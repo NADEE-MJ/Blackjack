@@ -31,7 +31,7 @@ void Hand::hit(Card deck[52], int *topCard) {
     sizeHand++;
 }
 
-void Hand::handValue() {
+int Hand::handValue() {
     int handValue = 0;
 	for (int i = 0; i < sizeHand; i++) {
 		int cardValue = hand[i].cardValue();
@@ -47,41 +47,46 @@ void Hand::handValue() {
 			}
 		}
 	}
-	valueHand = handValue;
+	return handValue;
 }
 
 void Hand::displayHand() {
-    int cardSize = 13;
+    int textCardSize = 13;
     std::string temp;
-    for (int i = 0; i < cardSize; i++) {
-        temp = "   ";    
+
+    for (int i= 0; i < sizeHand; i++) {
+        temp = "";
+        temp = hand[i].displayCardName();
+        for (int j = temp.length(); j < 21; j++) {
+            temp += " ";
+        }
+        std::cout << temp;
+    }
+    std::cout << std::endl;
+
+    for (int i = 0; i < textCardSize; i++) {
+        temp = "";    
         for (int j = 0; j < sizeHand; j++) {
             if (hand[j].suit == 'D') {
                 temp += textCard[hand[j].value - 1][i];
-                temp += "   ";
+                temp += "      ";
             }
             else if (hand[j].suit == 'H') {
                 temp += textCard[hand[j].value + 12][i];
-                temp += "   ";
+                temp += "      ";
             }
             else if (hand[j].suit == 'S') {
                 temp += textCard[hand[j].value + 25][i];
-                temp += "   ";
+                temp += "      ";
             }
             else if (hand[j].suit == 'C') {
                 temp += textCard[hand[j].value + 38][i];
-                temp += "   ";
+                temp += "      ";
             }
         }
         std::cout << temp << std::endl;
     }
 
-    for (int i= 0; i < sizeHand; i++) {
-        hand[i].displayCardName();
-        std::cout << "    ";
-    }
-    std::cout << std::endl;
-
-    handValue();
+    valueHand = handValue();
     std::cout << "Hand value is " << valueHand << std::endl;
 }

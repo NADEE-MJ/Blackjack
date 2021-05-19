@@ -11,6 +11,6 @@ class Hand : public Card {
         void createHand();
         void dealHand(Card Deck[52], int *topCard);
         void hit(Card Deck[52], int *topCard);
-        void handValue();
+        int handValue();
         void displayHand();
 };
