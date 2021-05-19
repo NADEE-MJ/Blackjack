@@ -1,8 +1,8 @@
 #include <C:/Programming/Github Projects/BlackjackGame/Include/Deck.h>
 #include <iostream>
+#include <time.h>
 
 Deck::Deck() {
-    Card deck[52];
     int topCard = 0;
     createDeck();
     shuffle();

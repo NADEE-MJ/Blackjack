@@ -6,12 +6,11 @@ class Deck : public Card {
     and stores the position of the top card, the deck has two methods, one initializes the deck and the other
     shuffles the deck.
     */
-    private:
+    public:
         //class variables
-        Card deck[];
+        Card deck[52];
         int topCard;
 
-    public:
         //blank constructor
         Deck();
 

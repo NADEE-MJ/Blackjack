@@ -7,12 +7,6 @@ Card::Card() {
     value = 0;
     suit = ' ';
 }
-        
-//value constructor
-Card::Card(int v, char s) {
-    value = v;
-    suit = s;
-}
 
 std::string Card::displayCardName() {
     /*

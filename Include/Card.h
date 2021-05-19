@@ -1,4 +1,5 @@
 #include <string>
+#pragma once
 
 class Card {
     /*
@@ -14,7 +15,6 @@ class Card {
 
         //constrctors
         Card();
-        Card(int v, char s);
 
         //methods
         std::string displayCardName();

@@ -1,15 +1,15 @@
 #include <C:/Programming/Github Projects/BlackjackGame/Include/Card.h>
 
 class Hand : public Card {
-    private:
+    public:
         Card hand[11];
         int sizeHand;
+        int valueHand;
 
-    public:
         void createHand();
         void dealHand(Card Deck[52], int topCard);
         void hit(Card Deck[52], int topCard);
-        int handValue();
+        void handValue();
         void displayHand();
 
         friend class Deck;

@@ -22,11 +22,11 @@ void Hand::dealHand(Card deck[52], int topCard) {
 
 void Hand::hit(Card deck[52], int topCard) {
     hand[sizeHand] = deck[topCard];
-        topCard++;
-        sizeHand++;
+    topCard++;
+    sizeHand++;
 }
 
-int Hand::handValue() {
+void Hand::handValue() {
     int handValue = 0;
 	for (int i = 0; i < sizeHand; i++) {
 		int cardValue = hand[i].cardValue();
@@ -42,7 +42,7 @@ int Hand::handValue() {
 			}
 		}
 	}
-	return handValue;
+	valueHand = handValue;
 }
 
 void Hand::displayHand() {
@@ -71,5 +71,5 @@ void Hand::displayHand() {
     }
     std::cout << std::endl;
 
-    std::cout << "Hand value is " << handValue() << std::endl;
+    std::cout << "Hand value is " << valueHand << std::endl;
 }
