@@ -7,11 +7,11 @@ class Hand : public Card {
         int sizeHand;
         int valueHand;
 
+        Hand();
+
         void createHand();
         void dealHand(Card Deck[52], int topCard);
         void hit(Card Deck[52], int topCard);
         void handValue();
         void displayHand();
-
-        friend class Deck;
 };

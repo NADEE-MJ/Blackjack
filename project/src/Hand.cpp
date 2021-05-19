@@ -2,6 +2,11 @@
 #include <C:\Programming\Github Projects\BlackjackGame\project\inc\TextCard.h>
 #include <iostream>
 
+Hand::Hand() {
+    sizeHand = 0;
+    valueHand = 0;
+}
+
 void Hand::createHand() {
     const int largestHand = 11;
 
@@ -13,10 +18,10 @@ void Hand::createHand() {
 
 void Hand::dealHand(Card deck[52], int topCard) {
     const int standardHand = 2;
+    sizeHand = standardHand;
     for (int i = 0; i < standardHand; i++) {
         hand[i] = deck[topCard];
         topCard++;
-        sizeHand++;
     }
 }
 
@@ -46,23 +51,33 @@ void Hand::handValue() {
 }
 
 void Hand::displayHand() {
-    for (int i= 0; i < 13; i++) {    
-        for (int j = 0; j < sizeHand; j++){
-            switch(hand[j].suit) {
-                case 'D':
-                    std::cout << textCard[value - 1][i] << "   ";
+    std::cout << hand[0].suit << hand[0].value << " " << hand[1].suit << hand[1].value <<
+        " " << hand[2].suit << hand[2].value << std::endl;
+    
+    std::cout << "Hand value is " << valueHand << std::endl;
 
-                case 'H':
-                    std::cout << textCard[value + 12][i] << "   ";
-
-                case 'S':
-                    std::cout << textCard[value + 25][i] << "   ";
-
-                case 'C':
-                    std::cout << textCard[value + 38][i] << "   ";
+    std::string temp;
+    for (int i = 0; i < 13; i++) {
+        temp = "";    
+        for (int j = 0; j < sizeHand; j++) {
+            if (hand[j].suit == 'D') {
+                temp += textCard[hand[j].value - 1][i];
+                temp += "   ";
             }
-            std::cout << std::endl;
+            else if (hand[j].suit == 'H') {
+                temp += textCard[hand[j].value + 12][i];
+                temp += "   ";
+            }
+            else if (hand[j].suit == 'S') {
+                temp += textCard[hand[j].value + 25][i];
+                temp += "   ";
+            }
+            else if (hand[j].suit == 'C') {
+                temp += textCard[hand[j].value + 38][i];
+                temp += "   ";
+            }
         }
+        std::cout << temp << std::endl;
     }
 
     for (int i= 0; i < 3; i++) {

@@ -12,22 +12,22 @@ void Deck::createDeck() {
     const int cardsInSuit = 13;
 
     for (int i = 0; i < cardsInSuit; i++) {
-        deck[i].value = i + 2;
+        deck[i].value = i + 1;
         deck[i].suit = 'S';
     }
 
     for (int i = 0; i < cardsInSuit; i++) {
-        deck[i + 13].value = i + 2;
+        deck[i + 13].value = i + 1;
         deck[i + 13].suit = 'D';
     }
 
     for (int i = 0; i < cardsInSuit; i++) {
-        deck[i + 26].value = i + 2;
+        deck[i + 26].value = i + 1;
         deck[i + 26].suit = 'C';
     }
 
     for (int i = 0; i < cardsInSuit; i++) {
-        deck[i + 39].value = i + 2;
+        deck[i + 39].value = i + 1;
         deck[i + 39].suit = 'H';
     }
 }

@@ -20,13 +20,15 @@ int main() {
 
 
     d.shuffle();
-    std::cout << "Game: Blackjack!" << std::endl << std::endl;
-    std::cout << "Here are your cards." << std::endl;
-
+    std::cout << "Game: Blackjack" << std::endl << std::endl;
+    std::cout << "Here are your cards:" << std::endl;
+    
     player.dealHand(d.deck, d.topCard);
     player.handValue();
     player.displayHand();
-    
+
+
+    std::cout << "Here are your cards:" << std::endl;
     
 
     //std::string hitOrStay;
