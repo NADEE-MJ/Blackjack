@@ -9,8 +9,8 @@ class Hand : public Card {
         Hand();
 
         void createHand();
-        void dealHand(Card Deck[52], int topCard);
-        void hit(Card Deck[52], int topCard);
+        void dealHand(Card Deck[52], int *topCard);
+        void hit(Card Deck[52], int *topCard);
         void handValue();
         void displayHand();
 };

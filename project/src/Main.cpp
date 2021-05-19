@@ -16,29 +16,26 @@ int main() {
 
     //while (running) {
     
-    std::cout << std::flush;
+    //std::cout << std::flush;
 
     d.shuffle();
     std::cout << "Game: Blackjack" << std::endl << std::endl;
     std::cout << "Here are your cards:" << std::endl;
-    player.hand[0].value = 9;
-    player.hand[0].suit = 'S';
 
-    player.hand[1].value = 10;
-    player.hand[1].suit = 'S';
-
+    player.dealHand(d.deck, &d.topCard);
     player.displayHand();
-    player.dealHand(d.deck, d.topCard);
-    player.handValue();
-    player.displayHand();
-
-
-    std::cout << "Here are your cards:" << std::endl;
     
+    char hitOrStay;
+    do
+    {
+        std::cout << "Enter h to hit or anything else to stay: ";
+        std::cin >> hitOrStay;
+        if (hitOrStay == 'h' || hitOrStay == 'H') {
+            player.hit(d.deck, &d.topCard);
 
-    //std::string hitOrStay;
-
-
+            player.displayHand();
+        }
+    } while (hitOrStay == 'h' || hitOrStay == 'H');
+    
     //}
-
 }

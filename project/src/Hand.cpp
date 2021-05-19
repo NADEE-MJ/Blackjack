@@ -16,18 +16,18 @@ void Hand::createHand() {
     }   
 }
 
-void Hand::dealHand(Card deck[52], int topCard) {
+void Hand::dealHand(Card deck[52], int *topCard) {
     const int standardHand = 2;
     sizeHand = standardHand;
     for (int i = 0; i < standardHand; i++) {
-        hand[i] = deck[topCard];
-        topCard++;
+        hand[i] = deck[*topCard];
+        *topCard += 1;
     }
 }
 
-void Hand::hit(Card deck[52], int topCard) {
-    hand[sizeHand] = deck[topCard];
-    topCard++;
+void Hand::hit(Card deck[52], int *topCard) {
+    hand[sizeHand] = deck[*topCard];
+    *topCard += 1;
     sizeHand++;
 }
 
@@ -51,11 +51,6 @@ void Hand::handValue() {
 }
 
 void Hand::displayHand() {
-    std::cout << hand[0].suit << hand[0].value << " " << hand[1].suit << hand[1].value <<
-        " " << hand[2].suit << hand[2].value << std::endl;
-    
-    std::cout << "Hand value is " << valueHand << std::endl;
-
     int cardSize = 13;
     std::string temp;
     for (int i = 0; i < cardSize; i++) {
@@ -81,11 +76,12 @@ void Hand::displayHand() {
         std::cout << temp << std::endl;
     }
 
-    for (int i= 0; i < 3; i++) {
+    for (int i= 0; i < sizeHand; i++) {
         hand[i].displayCardName();
         std::cout << "    ";
     }
     std::cout << std::endl;
 
+    handValue();
     std::cout << "Hand value is " << valueHand << std::endl;
 }
