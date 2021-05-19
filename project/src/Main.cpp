@@ -21,8 +21,6 @@ int main() {
     player.createHand();
     dealer.createHand();
 
-    //std::cout << std::flush;
-
     do {
         playerEndGame = false;
         dealerEndGame = false;
@@ -81,6 +79,7 @@ int main() {
                 }
                 Sleep(2000);
             } while (dealerHit);
+
             if (!dealerEndGame) {
                 if (player.valueHand > dealer.valueHand) {
                     std::cout << "You Win!" << std::endl;
