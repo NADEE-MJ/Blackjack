@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Programming/Github Projects/BlackjackGame/build/project",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/BlackjackGame.dir/includes_CXX.rsp  -std=c++2a -g -o CMakeFiles\\BlackjackGame.dir\\src\\Main.cpp.obj -c \"C:\\Programming\\Github Projects\\BlackjackGame\\project\\src\\Main.cpp\"",
+  "file": "C:/Programming/Github Projects/BlackjackGame/project/src/Main.cpp"
+},
+{
+  "directory": "C:/Programming/Github Projects/BlackjackGame/build/project",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/BlackjackGame.dir/includes_CXX.rsp  -std=c++2a -g -o CMakeFiles\\BlackjackGame.dir\\src\\Deck.cpp.obj -c \"C:\\Programming\\Github Projects\\BlackjackGame\\project\\src\\Deck.cpp\"",
+  "file": "C:/Programming/Github Projects/BlackjackGame/project/src/Deck.cpp"
+},
+{
+  "directory": "C:/Programming/Github Projects/BlackjackGame/build/project",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/BlackjackGame.dir/includes_CXX.rsp  -std=c++2a -g -o CMakeFiles\\BlackjackGame.dir\\src\\Hand.cpp.obj -c \"C:\\Programming\\Github Projects\\BlackjackGame\\project\\src\\Hand.cpp\"",
+  "file": "C:/Programming/Github Projects/BlackjackGame/project/src/Hand.cpp"
+},
+{
+  "directory": "C:/Programming/Github Projects/BlackjackGame/build/project",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/BlackjackGame.dir/includes_CXX.rsp  -std=c++2a -g -o CMakeFiles\\BlackjackGame.dir\\src\\Card.cpp.obj -c \"C:\\Programming\\Github Projects\\BlackjackGame\\project\\src\\Card.cpp\"",
+  "file": "C:/Programming/Github Projects/BlackjackGame/project/src/Card.cpp"
+}
+]
