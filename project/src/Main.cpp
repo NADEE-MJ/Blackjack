@@ -1,5 +1,5 @@
-#include <C:\Programming\Github Projects\BlackjackGame\project\inc\Deck.h>
-#include <C:\Programming\Github Projects\BlackjackGame\project\inc\Hand.h>
+#include <Deck.h>
+#include <Hand.h>
 #include <iostream>
 #include <Windows.h>
 

@@ -1,7 +1,7 @@
 project/CMakeFiles/BlackjackGame.dir/src/Deck.cpp.obj: \
  C:\Programming\Github\ Projects\BlackjackGame\project\src\Deck.cpp \
- C:\Programming\Github\ Projects\BlackjackGame\project\inc\Deck.h \
- C:\Programming\Github\ Projects\BlackjackGame\project\inc\Card.h \
+ C:/PROGRA~4/GITHUB~1/BLACKJ~1/project/inc/Deck.h \
+ C:/PROGRA~4/GITHUB~1/BLACKJ~1/project/inc/Card.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \

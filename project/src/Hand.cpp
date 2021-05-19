@@ -1,5 +1,5 @@
-#include <C:\Programming\Github Projects\BlackjackGame\project\inc\Hand.h>
-#include <C:\Programming\Github Projects\BlackjackGame\project\inc\TextCard.h>
+#include <Hand.h>
+#include <TextCard.h>
 #include <iostream>
 
 Hand::Hand() {

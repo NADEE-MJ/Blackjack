@@ -1,4 +1,4 @@
-#include <C:\Programming\Github Projects\BlackjackGame\project\inc\Card.h>
+#include <Card.h>
 #pragma once
 
 class Deck : public Card {
