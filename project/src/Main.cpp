@@ -3,18 +3,27 @@
 #include <iostream>
 #include <windows.h>
 
-Deck d;
-
-Hand player;
-Hand dealer;
-
 int main() {
+    /*
+    Blackjack game logic, first displays player cards and determines if they instantly win if the get 21 off the bat.
+    Asks player if they would like to hit or stay with their current hand, then determines if they should hit again,
+    if they busted, or if they win. Then does dealer logic. If dealer has less than 17 in his hand they have to hit.
+    Finally compares dealers hand and players hand to see who wins and displays output. Then asks player if they
+    would like to play again.
+    */
+
+    //initialize all objects and variables
+    Deck d;
+
+    Hand player;
+    Hand dealer;
+
     bool playing;
     bool playerEndGame;
     bool dealerEndGame;
     bool dealerHit;
-    char playAgain;
 
+    char playAgain;
     char hitOrStay; 
 
     do {
