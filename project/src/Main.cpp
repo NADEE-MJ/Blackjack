@@ -17,10 +17,6 @@ int main() {
 
     char hitOrStay; 
 
-    d.createDeck();
-    player.createHand();
-    dealer.createHand();
-
     do {
         playerEndGame = false;
         dealerEndGame = false;

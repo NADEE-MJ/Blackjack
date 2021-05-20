@@ -1,5 +1,13 @@
 #include <string>
 
+
+/*
+This is a 2d array of text based playing cards, the cards in the following order:
+diamonds, hearts, spades, then clubs. There are 52 total cards 13 cards for each
+suit. The cards are each 13 lines long so can be printed vertically using
+a for loop. The cards each have the unicode symbols for each suit.
+*/
+
 const std::string textCard[52][13] = {
 { " ------------- ",
 "|A\u2662           |",
