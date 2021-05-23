@@ -3,7 +3,7 @@
 #include <iostream>
 
 Card::Card() {
-    //blank constructor - initializes card objecct variables
+    //blank constructor - initializes card objecct variable
     value = 0;
     suit = ' ';
 }
